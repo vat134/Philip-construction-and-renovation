@@ -26,7 +26,6 @@ https://philip-construction-and-renovation.netlify.app/
 # Photos Mobile Version
 
 <img width="314" height="1123" alt="изображение" src="https://github.com/user-attachments/assets/7f88fa6a-a479-4a11-be69-8c6eba8dfd95" />
-<img width="314" height="6320" alt="изображение" src="https://github.com/user-attachments/assets/f3a12976-5cb2-464b-a29b-528ed8927c34" />
-
+<img width="314" height="1123" alt="изображение" src="https://github.com/user-attachments/assets/c4887af3-c9ce-4f90-b471-cff8d99e17fe" />
 <img width="314" height="1123" alt="изображение" src="https://github.com/user-attachments/assets/4392df81-9a0c-4c87-a0fc-04e92adb2384" />
 <img width="314" height="1123" alt="изображение" src="https://github.com/user-attachments/assets/d1da75d5-e4ea-4c98-a570-2f1260289f4a" />
