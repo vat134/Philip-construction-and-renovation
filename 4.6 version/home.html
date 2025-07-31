@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Philip Construction & Renovation </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop main-links">
+            <a href="#home" data-translate-key="navHome">Home</a>
+            <a href="#works" data-translate-key="navWork">My Work</a>
+            <a href="#testimonials" data-translate-key="navGallery">Gallery</a>
+            <a href="#about" data-translate-key="navAbout">About</a>
+            <a href="#contact" data-translate-key="navContact">Contact</a>
+          </nav>
+
+          <nav class="nav-desktop external-links">
+            <a href="/Tile_work.html" data-translate-key="navTile_work">Tile work</a>
+            <a href="/Painting_work.html" data-translate-key="navPainting_work">Painting work</a>
+            <a href="/Facade_work.html" data-translate-key="navFacade_work">Facade work</a>
+          </nav>
+
+          <!-- Language Selector & Contact Button & Mobile Menu -->
+          <div class="header-actions">
+            <!-- Language Selector -->
+            <div class="language-selector">
+              <button class="language-btn" onclick="toggleLanguageMenu()">
+                <span class="flag" id="currentFlag">🇺🇸</span>
+                <span class="lang-code" id="currentLang">EN</span>
+                <svg
+                  class="dropdown-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a
+                  href="#"
+                  class="language-option"
+                  onclick="changeLanguage('en', '🇺🇸', 'EN')"
+                >
+                  <span class="flag">🇺🇸</span>
+                  <span class="lang-name">English</span>
+                </a>
+                <a
+                  href="#"
+                  class="language-option"
+                  onclick="changeLanguage('lv', '🇱🇻', 'LV')"
+                >
+                  <span class="flag">🇱🇻</span>
+                  <span class="lang-name">Latviešu</span>
+                </a>
+                <a
+                  href="#"
+                  class="language-option"
+                  onclick="changeLanguage('ru', '🇷🇺', 'RU')"
+                >
+                  <span class="flag">🇷🇺</span>
+                  <span class="lang-name">Русский</span>
+                </a>
+              </div>
+            </div>
+
+            <a href="tel:+37112345678" class="btn btn-primary btn-desktop">
+              <svg
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"
+                ></path>
+              </svg>
+              <span>+371 268 103 98</span>
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+              <svg
+                class="menu-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+              <svg
+                class="close-icon hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile" id="mobileNav">
+          <a href="#home" data-translate-key="navHome">Home</a>
+          <a href="#works" data-translate-key="navWork">Our Work</a>
+          <a href="#testimonials" data-translate-key="navGallery">Gallery</a>
+          <a href="#about" data-translate-key="navAbout">About</a>
+          <a href="#contact" data-translate-key="navContact">Contact</a>
+          
+          <a href="/Tile_work.html" data-translate-key="navMobTile_work">Tile work page</a>
+          <a href="/Painting_work.html" data-translate-key="navMobPainting_work">Painting work page</a>
+          <a href="/Facade_work.html" data-translate-key="navMobFacade_work">Facade work page</a>
+
+          <!-- language -->
+          <div class="mobile-language-selector">
+            <p class="mobile-lang-title" data-translate-key="langMenuTitle">
+              Language / Valoda / Язык:
+            </p>
+            <div class="mobile-language-options">
+              <a href="#" class="mobile-language-option" onclick="changeLanguage('en', '🇺🇸', 'EN')">
+                <span class="flag">🇺🇸</span>
+                <span>English</span>
+              </a>
+              <a href="#" class="mobile-language-option" onclick="changeLanguage('lv', '🇱🇻', 'LV')">
+                <span class="flag">🇱🇻</span>
+                <span>Latviešu</span>
+              </a>
+              <a href="#" class="mobile-language-option" onclick="changeLanguage('ru', '🇷🇺', 'RU')">
+                <span class="flag">🇷🇺</span>
+                <span>Русский</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Телефон -->
+          <a href="tel:+37112345678" class="btn btn-primary" style="color: white;">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"
+              ></path>
+            </svg>
+            <span>+371 123 456 78</span>
+          </a>
+        </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 data-translate-key="heroTitle">
+            <span class="highlight">Professional master Philip</span>
+            will make repairs of any difficulty
+          </h1>
+          <p data-translate-key="heroSubtitle">
+            All kinds of repair and construction and finishing works: works on regipsu plastering works insulation and noise insulation leveling of floors and walls laying laminate and tile installation of door blocks painting works spackle painting wallpaper wallpaper facade works
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-secondary btn-lg">
+              <a href="#works" style="text-decoration: none; color: black;"><span data-translate-key="viewWorkBtn">View My Work</span></a>
+              <svg
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Features -->
+          <div class="features-grid">
+            <div class="feature">
+              <svg class="icon feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-translate-key="featureExperience">15+ Years Experience</span>
+            </div>
+            <div class="feature">
+              <svg class="icon feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-translate-key="featureCraftsmanship">Quality Craftsmanship</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-translate-key="worksTitle">Types of my work</h2>
+          <p data-translate-key="worksSubtitle">
+            These are the categories of work I do. Click on them to see more.
+          </p>
+        </div>
+
+
+        <!-- Item 1 -->
+        <div class="works-grid">
+          <a href="/Tile_work.html" class="work-card-link">
+            <div class="work-card">
+              <div class="work-image">
+                <img
+                  src="../Tile_works_photos/photo_6003843717343070819_y.jpg"
+                  alt="photo"
+                />
+              </div>
+              <div class="work-content">
+                <div class="work-badge" data-translate-key="work1_badge">Tile Work</div>
+                <h3 data-translate-key="work1_title">Beautifully laid tiles for the kitchen area</h3>
+                <p data-translate-key="work1_desc">
+                  Beautifully laid tiles in light blue tones for the kitchen area, measured to the millimeter for maximum practicality.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 2 -->
+          <a href="/Painting_work.html" class="work-card-link">
+            <div class="work-card">
+              <div class="work-image">
+                <img
+                  src="../Painting_works_photos/photo_6026152172615485648_y.jpg"
+                  alt="photo"
+                />
+              </div>
+              <div class="work-content">
+                <div class="work-badge" data-translate-key="work2_badge">Painting Work</div>
+                <h3 data-translate-key="work2_title">Smooth, beautiful walls in the room</h3>
+                <p data-translate-key="work2_desc">
+                  Plain walls in a room with an even coat of paint and precision at the joints
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 3 -->
+          <a href="/Facade_work.html" class="work-card-link">
+            <div class="work-card">
+              <div class="work-image">
+                <img
+                  src="../Facade_works_photos/photo_6026152172615485664_y.jpg"
+                  alt="photo"
+                />
+              </div>
+              <div class="work-content">
+                <div class="work-badge" data-translate-key="work3_badge">Facade work</div>
+                <h3 data-translate-key="work3_title">A neat house with finished facade work</h3>
+                <p data-translate-key="work3_desc">
+                  The appearance of an ordinary house after my work on the facades
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery Slider -->
+    <section id="testimonials" class="gallery">
+      <div class="section-header">
+        <h2 data-translate-key="galleryTitle">Project Gallery</h2>
+        <p data-translate-key="gallerySubtitle">
+          Take a look at our finished work
+        </p>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider" id="gallerySlider">
+          <div class="slide active"><img src="../Painting_works_photos/photo_6026152172615485655_y.jpg" alt="Kitchen Project"/></div>
+          <div class="slide"><img src="../Tile_works_photos/photo_6003843717343070835_y.jpg" alt="Bathroom Project"/></div>
+          <div class="slide"><img src="../Tile_works_photos/photo_6003843717343070807_y.jpg" alt="Home Addition"/></div>
+          <div class="slide"><img src="../Facade_works_photos/photo_6026152172615485674_y.jpg" alt="Renovation Project"/></div>
+          <div class="slide"><img src="../Facade_works_photos/photo_6026152172615485672_y.jpg" alt="Living Room"/></div>
+        </div>
+
+        <button class="slider-btn prev" onclick="changeSlide(-1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+        <button class="slider-btn next" onclick="changeSlide(1)"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span><span class="dot" onclick="currentSlide(2)"></span><span class="dot" onclick="currentSlide(3)"></span><span class="dot" onclick="currentSlide(4)"></span><span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://media.istockphoto.com/id/1425185287/vector/the-worker-icon-jack-of-all-trades-a-black-silhouette-of-a-man-in-a-construction-helmet.jpg?s=612x612&w=0&k=20&c=EtyiSZrkQi11PThtUQZ3bqkj4XD-bqsDtZz5I3zpuUg=" alt="Chris - Founder and Lead Contractor"/>
+            <div class="experience-badge">
+              <div class="badge-number">15+</div>
+              <div class="badge-text" data-translate-key="aboutExperienceBadge">Years Experience</div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <h2 data-translate-key="aboutTitle">About Me</h2>
+
+            <div class="about-paragraphs">
+              <p data-translate-key="aboutPara1">
+                Based in Riga, Latvia, Philip is a seasoned construction and renovation specialist with decades of hands-on experience. As a trusted professional in facade work, apartment renovations, and general construction, he brings precision, reliability, and a personal touch to every project.
+              </p>
+              <p data-translate-key="aboutPara2">
+                More than just a contractor, Philip is a true craftsman who handles every stage of the process — from planning to finishing — with care and attention to detail. He specializes in a wide range of services, including drywall installation, plastering, insulation and soundproofing, leveling of floors and walls, laminate and tile installation, door fitting, painting, wallpapering, and comprehensive facade work.
+              </p>
+              <p data-translate-key="aboutPara3">
+                With a deep understanding of how people live and what their homes need, he offers tailored solutions that combine practicality and aesthetics. From material selection and delivery to the final coat of paint, every step is done with dedication and craftsmanship.
+              </p>
+              <div class="highlight-box">
+                <p data-translate-key="aboutHighlight">
+                  We offer <strong>clear communication</strong>, flexible <strong>staged payments</strong>, and
+                  <strong>reliable results that last</strong>. Working with Philip means no guesswork and no delays —
+                  just a smooth process built on trust and experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-translate-key="contactTitle">Ready to Start?</h2>
+          <p data-translate-key="contactSubtitle">
+            Contact me today to discuss your project. I'am here to go over the details and bring your vision to life with expert craftsmanship and attention to detail.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"></path></svg>
+            <h3 data-translate-key="contactCall">Call Me</h3>
+            <p><a href="tel:+37112345678" style="color: unset; text-decoration: none">(+371) 268 103 98</a></p>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <h3 data-translate-key="contactEmail">Email</h3>
+            <p><a href="mailto:fill55fill@inbox.lv" style="color: unset; text-decoration: none">fill55fill@inbox.lv</a></p>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <h3 data-translate-key="contactArea">Service Area</h3>
+            <p>Riga, Latvia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <h3>Philip Construction & Renovation</h3>
+            <p data-translate-key="footerDesc">
+              Professional construction and renovation services in Riga and surrounding areas. Trusted craftsmanship and hands-on experience for over 15 years.
+            </p>
+            <div class="footer-badges">
+              <span class="footer-badge secondary" data-translate-key="footerBadgeExperience">15+ Years Experience</span>
+            </div>
+          </div>
+
+          <div class="footer-services">
+            <h4 data-translate-key="footerServicesTitle">Services</h4>
+            <ul>
+              <li data-translate-key="footerService1">Facade Work</li>
+              <li data-translate-key="footerService2">Apartment Renovations</li>
+              <li data-translate-key="footerService3">General Construction</li>
+              <li data-translate-key="footerService4">Drywall and Plastering</li>
+              <li data-translate-key="footerService5">Floor and Wall Leveling</li>
+              <li data-translate-key="footerService6">Laminate and Tile Installation</li>
+              <li data-translate-key="footerService7">Painting, Wallpapering</li>
+              <li data-translate-key="footerService8">Material Delivery Assistance</li>
+            </ul>
+          </div>
+
+
+          <div class="footer-contact">
+            <h4 data-translate-key="footerContactTitle">Contact</h4>
+            <ul>
+              <li><a href="tel:+37112345678" style="color: unset; text-decoration: none">(+371) 268 103 98</a></li>
+              <li><a href="mailto:fill55fill@inbox.lv" style="color: unset; text-decoration: none">fill55fill@inbox.lv</a></li>
+              <li>Riga, Latvia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-translate-key="footerCopyright">
+            © 2025 Philip Construction & Renovation. All rights reserved.
+          </p>
+          <p class="developer-credit" style="font-size:0.8em; margin-top:5px;">
+            Website by <a href="https://github.com/vat134" class="developer-credit" target="_blank" rel="noopener noreferrer">vat134</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

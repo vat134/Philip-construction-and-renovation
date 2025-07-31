@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip Construction & Renovation - Tile Work Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Tile_work.css" />
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop external-links">
+                    <a href="/home.html" data-translate-key="navHome" >Home</a>
+                    <a href="/Tile_work.html" data-translate-key="navTile_work">Tile work</a>
+                    <a href="/Painting_work.html" data-translate-key="navPainting_work">Painting work</a>
+                    <a href="/Facade_work.html" data-translate-key="navFacade_work">Facade work</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" onclick="toggleLanguageMenu()">
+                            <span class="flag" id="currentFlag">🇺🇸</span>
+                            <span class="lang-code" id="currentLang">EN</span>
+                            <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" class="language-option" onclick="changeLanguage('en', '🇺🇸', 'EN')"><span class="flag">🇺🇸</span><span class="lang-name">English</span></a>
+                            <a href="#" class="language-option" onclick="changeLanguage('lv', '🇱🇻', 'LV')"><span class="flag">🇱🇻</span><span class="lang-name">Latviešu</span></a>
+                            <a href="#" class="language-option" onclick="changeLanguage('ru', '🇷🇺', 'RU')"><span class="flag">🇷🇺</span><span class="lang-name">Русский</span></a>
+                        </div>
+                    </div>
+                    <a href="tel:+37126810398" class="btn btn-primary btn-desktop">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"></path></svg>
+                        <span>+371 268 103 98</span>
+                    </a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        <svg class="close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-mobile" id="mobileNav">
+                <a href="/Home.html" data-translate-key="navHome">Home</a>
+                <a href="/Tile_work.html" data-translate-key="navMobTile_work">Tile work page</a>
+                <a href="/Painting_work.html" data-translate-key="navMobPainting_work">Painting work page</a>
+                <a href="/Facade_work.html" data-translate-key="navMobFacade_work">Facade work page</a>
+
+                <div class="mobile-language-selector">
+                    <p class="mobile-lang-title" data-translate-key="langMenuTitle">Language / Valoda / Язык:</p>
+                    <div class="mobile-language-options">
+                        <a href="#" class="mobile-language-option" onclick="changeLanguage('en', '🇺🇸', 'EN')"><span class="flag">🇺🇸</span><span>English</span></a>
+                        <a href="#" class="mobile-language-option" onclick="changeLanguage('lv', '🇱🇻', 'LV')"><span class="flag">🇱🇻</span><span>Latviešu</span></a>
+                        <a href="#" class="mobile-language-option" onclick="changeLanguage('ru', '🇷🇺', 'RU')"><span class="flag">🇷🇺</span><span>Русский</span></a>
+                    </div>
+                </div>
+                <!-- Mobile -->
+                <a href="tel:+37112345678" class="btn btn-primary" style="color: white;">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"
+                    ></path>
+                    </svg>
+                    <span>+371 123 456 78</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Filters -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate-key="tileGalleryTitle">Our Tile Work Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate-key="tileGallerySubtitle">
+                    Browse through my extensive collection of tile installations, from elegant bathrooms to durable floor tiling for spacious interiors.
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn active px-4 py-2 rounded-full border border-gray-300" data-filter="all" data-translate-key="filterAll">All Projects</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-900 hover:text-white transition-colors" data-filter="bathroom" data-translate-key="filterBathrooms">Bathrooms</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-900 hover:text-white transition-colors" data-filter="kitchen" data-translate-key="filterKitchens">Kitchens</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-900 hover:text-white transition-colors" data-filter="floor" data-translate-key="filterFlooring">Flooring</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-900 hover:text-white transition-colors" data-filter="feature" data-translate-key="filterFeatureWalls">Feature Walls</button>
+            </div>
+            
+            <!-- Improved Gallery Grid -->
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-4" id="gallery-grid">
+                
+                <!-- Item 38 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070839_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption38">Bathroom with gray tile trim.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 17 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="kitchen">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070819_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterKitchens">Kitchen</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption17">Blue-gray patterned tile kitchen.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 15 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="kitchen">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070817_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterKitchens">Kitchen</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption15">Blue-gray patterned tile kitchen.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070804_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption1">Shower cubicle finished in brown mosaic tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070805_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption2">Floor tile in the spacious hallway.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070806_y copy.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption3">Curved tiled staircase.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070807_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption5">Curved tiled staircase.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070808_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption6">Light colored stair tile flooring.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070809_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption7">Curved tiled staircase.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070810_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption8">Large room with light colored tile flooring.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 9 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070811_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption9">Staircase and floor finished with light colored tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070812_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption10">Spacious room with columns and glossy tile floor.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Item 4 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070841_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption4">Modern shower cubicle with dark tile finish.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 37 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070838_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption37">Shower area with dark gray tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070814_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption12">Staggered floor tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070813_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption11">Classic black and white tile laid with rhombuses.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 13 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070815_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption13">A shower room lined with brightly colored mosaics.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 14 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070816_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption14">A shower room lined with brightly colored mosaics.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 16 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070818_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption16">Bathroom washbasin with patterned tiling.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 24 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070825_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption24">The kitchen floor in the gray hexagonal tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 26 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070827_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption26">The kitchen floor in the gray hexagonal tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 27 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="kitchen">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070828_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterKitchens">Kitchen</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption27">The kitchen floor in the gray hexagonal tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                
+                <!-- Item 21 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070822_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption21">Finishing a street staircase with tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 
+                <!-- Item 18 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070840_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption18">The process of laying large format gray tiles on the wall.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 19 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="floor">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070820_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFlooring">Flooring</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption19">Black and white floor tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 23 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070824_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption23">A wall finished with light-colored tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 25 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070826_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption25">Wall with volumetric 3D tiles in light color.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 28 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070829_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption28">Elegant bathroom with marble tile and bathtub.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 30 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070831_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption30">Modern bathroom design with marble tile.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 29 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070830_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption29">Combined finishing of walls in the bathroom: tile under wood and solid-colored tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 31 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070832_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption31">Combined finishing of walls in the bathroom: tile under wood and solid-colored tiles.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 32 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070833_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption32">Tile with imitation marble in the bathroom.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 20 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070842_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption20">Tile with imitation marble in the bathroom.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 33 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="bathroom">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070834_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterBathrooms">Bathroom</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption33">Tile with imitation marble in the bathroom.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 34 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070835_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption34">Black marble tile accent wall in the bathroom.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 36 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070837_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption36">Dramatic black marble tile in interior.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 35 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white" data-category="feature">
+                    <div class="relative h-full">
+                        <img src="../Tile_works_photos/photo_6003843717343070836_y.jpg" alt="photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-blue-800 text-white text-xs font-medium rounded-full mb-2" data-translate-key="filterFeatureWalls">Feature Wall</span>
+                                <h3 class="text-white font-semibold text-lg" data-translate-key="imgCaption35">Laying light gray marble tile on the walls.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-translate-key="contactTitle">Ready to Start?</h2>
+          <p data-translate-key="contactSubtitle">
+            Contact me today to discuss your project. I'am here to go over the details and bring your vision to life with expert craftsmanship and attention to detail.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.16 10.89a16 16 0 006.95 6.95l1.503-2.047a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V20a2 2 0 01-2 2h-1C13.75 22 2 10.25 2 4V3z"></path></svg>
+            <h3 data-translate-key="contactCall">Call Me</h3>
+            <p><a href="tel:+37112345678" style="color: unset; text-decoration: none">(+371) 268 103 98</a></p>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <h3 data-translate-key="contactEmail">Email</h3>
+            <p><a href="mailto:fill55fill@inbox.lv" style="color: unset; text-decoration: none">fill55fill@inbox.lv</a></p>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <h3 data-translate-key="contactArea">Service Area</h3>
+            <p>Riga, Latvia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <h3>Philip Construction & Renovation</h3>
+            <p data-translate-key="footerDesc">
+              Professional construction and renovation services in Riga and surrounding areas. Trusted craftsmanship and hands-on experience for over 15 years.
+            </p>
+            <div class="footer-badges">
+              <span class="footer-badge secondary" data-translate-key="footerBadgeExperience">15+ Years Experience</span>
+            </div>
+          </div>
+
+          <div class="footer-services">
+            <h4 data-translate-key="footerServicesTitle">Services</h4>
+            <ul>
+              <li data-translate-key="footerService1">Facade Work</li>
+              <li data-translate-key="footerService2">Apartment Renovations</li>
+              <li data-translate-key="footerService3">General Construction</li>
+              <li data-translate-key="footerService4">Drywall and Plastering</li>
+              <li data-translate-key="footerService5">Floor and Wall Leveling</li>
+              <li data-translate-key="footerService6">Laminate and Tile Installation</li>
+              <li data-translate-key="footerService7">Painting, Wallpapering</li>
+              <li data-translate-key="footerService8">Material Delivery Assistance</li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4 data-translate-key="footerContactTitle">Contact</h4>
+            <ul>
+              <li><a href="tel:+37112345678" style="color: unset; text-decoration: none">(+371) 268 103 98</a></li>
+              <li><a href="mailto:fill55fill@inbox.lv" style="color: unset; text-decoration: none">fill55fill@inbox.lv</a></li>
+              <li>Riga, Latvia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-translate-key="footerCopyright">
+            © 2025 Philip Construction & Renovation. All rights reserved.
+          </p>
+          <p class="developer-credit" style="font-size:0.8em; margin-top:5px;">
+            Website by <a href="https://github.com/vat134" class="developer-credit" target="_blank" rel="noopener noreferrer">vat134</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <img src="" alt="" class="lightbox-content" id="lightbox-image" draggable="false">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- script -->
+    <script src="Tile_work.js"></script>
+</body>
+</html>
